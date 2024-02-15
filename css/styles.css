@@ -1,0 +1,311 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+:root {
+    --color-primary: #2f67ec
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* cabecera*/
+
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    
+}
+
+.nav {
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.nav_var {
+    margin: 0 auto;
+    padding: 0.6rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.nav .nav_var #logo {
+    
+    width: 100px;
+    
+}
+
+.dark-mode-toggle {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.dark-mode-toggle label {
+    margin-right: 5px;
+}
+
+/* switch 2 */
+
+* { box-sizing: border-box;}
+
+.switch input {
+    display: none;
+}
+
+.switch label {
+    display: block;
+    width: 60px;
+    height: 30px;
+    padding: 3px;
+    border-radius: 15px;
+    border: 2px solid #0d273d;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.switch label::after {
+    content: "";
+    display: inherit;
+    width: 20px;
+    height: 20px;
+    border-radius: 12px;
+    background: #0d273d;
+    transition: 0.3s;
+}
+
+.switch input:checked ~ label {
+    border-color: #ccc;
+}
+
+.switch input:checked ~ label::after {
+    translate: 30px 0;
+    background: #333;
+}
+
+
+/* menu */
+
+.menu {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(243, 130, 24);
+}
+
+.menu_var {
+    
+    max-width: 1200px;
+    background-color:rgba(0, 255, 255, 0);
+    display: flex;
+    
+    align-items: center;
+}
+
+.menu .menu_var ul {
+    display: flex;
+    
+    background-color: rgba(165, 42, 42, 0);
+    margin: 0;
+}
+
+.menu .menu_var ul li {
+    display: flex;
+    align-items: center;
+    
+    box-sizing: border-box;
+    height: 50px;
+}
+
+.menu_var ul li a {
+    color: rgb(231, 231, 231);
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 8px;
+    transition: all 0.3s linear;
+}
+
+.under {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    height: 6px;
+    width: 25%;
+    background: var(--color-primary);
+    transition: 0.35s;
+}
+
+.menu_var li a:hover {
+    
+    
+    color: rgb(255, 255, 255);
+    
+}
+
+
+
+/* Añadimos estilos para el switch */
+.switch2 {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch2 input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #0d273d;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #0d273d;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.main-content {
+    width: 100%;
+    margin-top: 122px;
+}
+
+/*carrucell*/
+
+/* Agrega estos estilos para posicionar el carrusel y las flechas */
+.carousel {
+    position: relative;
+    width: 100%;
+    /*max-width: 800px; /* Ajusta según el ancho deseado del carrusel */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    text-align: center;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.062);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*slider de productos*/
+
+/* Agrega estos estilos para posicionar el slider de productos y las flechas */
+.product-slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Ajusta según el ancho deseado del slider */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.product {
+    display: none;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coytecstore</title>
+    <meta name="description" content="Tienda de Celulares y Accesorios Originales Envios a todo el PERU">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#8f7ada">
+    <link rel="icon" type="/images/png" href="/images/iconoweb.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    <!-- Agrega estos enlaces en el head de tu documento HTML -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="nav">
+            <div class="nav_var">
+                <div id="logo">
+                    <a href="/"><img src="images/logotecoscuro.png" alt="logo coytecstore"></a>
+                </div>
+                <div class="buscador">
+                    <input type="text" placeholder="Buscar">
+                    <button type="button">Buscar</button>
+                </div>
+                <div class="dark-mode-toggle">
+                    <label for="darkModeToggle">Modo Oscuro</label>
+                    <label class="switch2">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="dark-mode-toggle">
+                    <label for="darkModeToggle">Modo Oscuro</label>
+                    <span class="switch">
+                        <input id="switch-round" type="checkbox"/>
+                        <label for="switch-round"></label>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menu_var">
+                <ul>
+                    <li><a href="/pag2.html">Accesorios</a></li>
+                    <li><a href="/landing.html">Celulares</a></li>
+                    <li><a href="#perifericos">Periféricos</a></li>
+                    <li><a href="#gadgets">Gadgets</a></li>
+                    <li><a href="#servicio">Servicio Técnico Software</a></li>
+                    <div class="under"></div>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="">
+            <div class="slick-carousel">
+                <div><img src="images/carr1.png" alt="Imagen 1"></div>
+                <div><img src="images/carr2.png" alt="Imagen 2"></div>
+                <div><img src="images/carr3.png" alt="Imagen 3"></div>
+                <!-- Agrega más elementos div con imágenes según sea necesario -->
+            </div>
+            <!-- Agrega el siguiente código donde desees que aparezca tu slider de productos -->
+            <div class="product-slider" id="productSlider">
+                <div class="product" data-href="producto1.html">
+                    <img src="images/producto1.png" alt="Producto 1">
+                    <h3>Producto 1</h3>
+                    <p>Descripción del Producto 1.</p>
+                </div>
+                <div class="product" data-href="producto2.html">
+                    <img src="images/producto2.png" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>Descripción del Producto 2.</p>
+                </div>
+                <!-- Agrega más elementos div con productos según sea necesario -->
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+
+
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="jss/script.js"></script>
+</body>
+</html>

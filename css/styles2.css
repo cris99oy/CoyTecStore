@@ -1,0 +1,255 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Agregamos transición para suavizar el cambio de color */
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #dfdfdf;
+    color: #c93838;
+    padding: 10px 0px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo img {
+    max-height: 50px;
+}
+
+.nav-prin {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-bar {
+    
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly
+    
+}
+
+.nav-bar ul li {
+    margin-right: 20px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: #e26363;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+    color: #cc1e1e;
+}
+
+.buscador {
+    margin-left: auto;
+    display: flex;
+}
+
+.buscador input {
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+.dark-mode-toggle {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.dark-mode-toggle label {
+    margin-right: 5px;
+}
+
+main {
+    margin-top: 127px;
+}
+
+.container {
+    width: 100%;
+   
+    margin: 0 auto;
+}
+
+#conteitemcarrucel1 {
+    
+    height: 400px;
+    overflow: hidden;
+}
+
+.itemcarrucel {
+    
+    height: 400px;
+    position: relative;
+}
+
+.tarjetascarrucel {
+    background-color:rgb(199, 148, 135);
+    height: 100%;
+}
+
+.flechascarrucel {
+    
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+#tarjetacarrucel-1 {
+    background-color: #0d273d;
+}
+
+#tarjetacarrucel-2 {
+    background-color: #1979c9;
+}
+
+#tarjetacarrucel-3 {
+    background-color: #81c0f3;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    color: #797979;
+}
+
+#contepuntos {
+    background-color: #3a3939;
+    display:flex;
+    justify-content: space-around;
+}
+
+/* Agrega estos estilos para posicionar el carrusel y las flechas */
+.carousel {
+    display: none;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+     /* Ajusta según el ancho deseado del carrusel */
+    margin: 0 auto;
+}
+
+.carousel-item {
+    display: none;
+    text-align: center;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+section {
+    margin-top: 80px;
+}
+
+footer {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #8a8787;
+}
+
+/* Añadimos estilos para el switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #0d273d;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #0d273d;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
